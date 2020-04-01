@@ -1,0 +1,56 @@
+/*  Light theme */
+$bg-light-theme: #FAFAFA;
+$color-light-theme: #333;
+
+/* Dark theme */
+$bg-dark-theme: #333;
+$color-dark-theme: #FAFAFA;
+
+$switch-path-color: #CCC;
+$switch-path-active-color: #555;
+$switch-handle-color: #39C8F7;;
+$switch-handle-active-color: #FF1204;
+
+.theme-switcher-wrap {
+    width: 100%;
+    text-align: right;
+    .theme-switcher-label {
+        display: inline-block;
+        cursor: pointer;
+        .switch-path {
+            width: 40px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: $switch-path-color;
+            transition: all .3s ease-in-out;
+            .switch-handle {
+                background-color: $switch-handle-color;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                transition: all .3s ease-in-out;
+            }
+        }
+        &.active {
+            .switch-path {
+                background-color: $switch-path-active-color;
+            }
+            .switch-handle {
+                background-color: $switch-handle-active-color;
+                transform: translateX(20px);
+            }
+        }
+    }
+}
+
+.app {
+    height: 100%;
+}
+
+.app.dark-theme {
+    background-color: $bg-dark-theme;
+    color: $color-dark-theme;
+    h1, p {
+        color: $color-dark-theme;
+    }
+}
